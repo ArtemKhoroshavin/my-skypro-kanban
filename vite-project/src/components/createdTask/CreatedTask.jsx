@@ -7,7 +7,7 @@ function CreatedTask() {
                     <h3 className="pop-new-card__ttl">Создание задачи</h3>
                     <a href="#" className="pop-new-card__close">&#10006;</a>
                     <div className="pop-new-card__wrap">
-                        <htmlForm className="pop-new-card__form form-new" id="formNewCard" action="#">
+                        <form  className="pop-new-card__form form-new" id="formNewCard" action="#">
                             <div className="pop-new__block">
                                 <label htmlFor="formTitle" className="subttl">Название задачи</label>
                                 <input className="pop-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." autoFocus></input>
@@ -16,7 +16,7 @@ function CreatedTask() {
                                 <label htmlFor="textArea" className="subttl">Описание задачи</label>
                                 <textarea className="pop-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea>
                             </div>
-                        </htmlForm>
+                        </form >
                         <div className="pop-new-card__calendar calendar">
                             <p className="calendar__ttl subttl">Даты</p>									
                             <div className="calendar__block">

@@ -6,7 +6,7 @@ import DataTask from './components/dataAboutTasks/DataTasks'
 import Header from './components/header/Header'
 import MainBlock from './components/mainBlock/MainBlock'
 import CalendarContent from './components/calendar/Calendar'
-
+import CardInfo from './components/mainBlock/CardInfo'
 
 function App() {
   return (
