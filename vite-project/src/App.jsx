@@ -1,22 +1,21 @@
 import { useState } from 'react'
 import './App.css'
-import IsExit from './components/exit/IsExit'
-import CreatedTask from './components/createdTask/CreatedTask'
-import DataTask from './components/dataAboutTasks/DataTasks'
-import Header from './components/header/Header'
-import MainBlock from './components/mainBlock/MainBlock'
-import CalendarContent from './components/calendar/Calendar'
-import CardInfo from './components/mainBlock/CardInfo'
+import { tasks } from './data'
+import { useEffect } from 'react'
+import { GlobalStyle } from './components/Global.styled'
+import AppRoutes from './Routes'
+
+
+
 
 function App() {
+
+
   return (
     <>
-      <Header/>
-      <IsExit/>
-      <CreatedTask/>
-      <DataTask/>
-      <MainBlock/>
-      
+      <GlobalStyle />
+
+      <AppRoutes/>
    </>
   )
 }

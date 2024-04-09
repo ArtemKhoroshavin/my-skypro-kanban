@@ -1,53 +1,55 @@
+import { CalendarCell, CalendarCells, CalendarDayName, CalendarDaysNames } from "./Calendar.styled"
+
 function CalendarContent() {
     return (
-        <div className="calendar__content">
-        <div className="calendar__days-names">
-            <div className="calendar__day-name">пн</div>
-            <div className="calendar__day-name">вт</div>
-            <div className="calendar__day-name">ср</div>
-            <div className="calendar__day-name">чт</div>
-            <div className="calendar__day-name">пт</div>
-            <div className="calendar__day-name -weekend-">сб</div>
-            <div className="calendar__day-name -weekend-">вс</div>
-        </div>
-        <div className="calendar__cells">
-            <div className="calendar__cell _other-month">28</div>
-            <div className="calendar__cell _other-month">29</div>
-            <div className="calendar__cell _other-month">30</div>
-            <div className="calendar__cell _cell-day">31</div>
-            <div className="calendar__cell _cell-day">1</div>
-            <div className="calendar__cell _cell-day _weekend">2</div>
-            <div className="calendar__cell _cell-day _weekend">3</div>
-            <div className="calendar__cell _cell-day">4</div>
-            <div className="calendar__cell _cell-day">5</div>
-            <div className="calendar__cell _cell-day ">6</div>
-            <div className="calendar__cell _cell-day">7</div>
-            <div className="calendar__cell _cell-day _current">8</div>
+        <CalendarContent>
+            <CalendarDaysNames>
+                <CalendarDayName>пн</CalendarDayName>
+                <CalendarDayName>вт</CalendarDayName>
+                <CalendarDayName>ср</CalendarDayName>
+                <CalendarDayName>чт</CalendarDayName>
+                <CalendarDayName>пт</CalendarDayName>
+                <CalendarDayName>сб</CalendarDayName>
+                <CalendarDayName>вс</CalendarDayName>
+            </CalendarDaysNames>
+        <CalendarCells>
+            <CalendarCell>28</CalendarCell>
+            <CalendarCell>29</CalendarCell>
+            <CalendarCell>30</CalendarCell>
+            <CalendarCell>31</CalendarCell>
+            <CalendarCell>1</CalendarCell>
+            <CalendarCell>2</CalendarCell>
+            <CalendarCell>3</CalendarCell>
+            <CalendarCell>4</CalendarCell>
+            <CalendarCell>5</CalendarCell>
+            <CalendarCell>6</CalendarCell>
+            <CalendarCell>7</CalendarCell>
+            <CalendarCell>8</CalendarCell>
             <div className="calendar__cell _cell-day _weekend _active-day">9</div>
             <div className="calendar__cell _cell-day _weekend">10</div>
-            <div className="calendar__cell _cell-day">11</div>
-            <div className="calendar__cell _cell-day">12</div>
-            <div className="calendar__cell _cell-day">13</div>
-            <div className="calendar__cell _cell-day">14</div>
-            <div className="calendar__cell _cell-day">15</div>
+            <CalendarCell>11</CalendarCell>
+            <CalendarCell>12</CalendarCell>
+            <CalendarCell>13</CalendarCell>
+            <CalendarCell>14</CalendarCell>
+            <CalendarCell>15</CalendarCell>
             <div className="calendar__cell _cell-day _weekend">16</div>
             <div className="calendar__cell _cell-day _weekend">17</div>
-            <div className="calendar__cell _cell-day">18</div>
-            <div className="calendar__cell _cell-day">19</div>
-            <div className="calendar__cell _cell-day">20</div>
-            <div className="calendar__cell _cell-day">21</div>
-            <div className="calendar__cell _cell-day">22</div>
+            <CalendarCell>18</CalendarCell>
+            <CalendarCell>19</CalendarCell>
+            <CalendarCell>20</CalendarCell>
+            <CalendarCell>21</CalendarCell>
+            <CalendarCell>22</CalendarCell>
             <div className="calendar__cell _cell-day _weekend">23</div>
             <div className="calendar__cell _cell-day _weekend">24</div>
-            <div className="calendar__cell _cell-day">25</div>
-            <div className="calendar__cell _cell-day">26</div>
-            <div className="calendar__cell _cell-day">27</div>
-            <div className="calendar__cell _cell-day">28</div>
-            <div className="calendar__cell _cell-day">29</div>
+            <CalendarCell>25</CalendarCell>
+            <CalendarCell>26</CalendarCell>
+            <CalendarCell>27</CalendarCell>
+            <CalendarCell>28</CalendarCell>
+            <CalendarCell>29</CalendarCell>
             <div className="calendar__cell _cell-day _weekend">30</div>
             <div className="calendar__cell _other-month _weekend">1</div>
-        </div>
-    </div>
+        </CalendarCells>
+        </CalendarContent>
     )
 }
 export default CalendarContent

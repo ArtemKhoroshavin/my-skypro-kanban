@@ -1,20 +1,34 @@
+import { Link } from "react-router-dom"
+import { ExitBlock, ExitButtonNo, ExitButtonYes, ExitContainer, ExitForm, ExitFormGroup, ExitTtl, PopExit } from "./IsExit.styled"
+import { paths } from "../../lib/constsns"
+
 function IsExit() {
+
+// 	const navigate = useNavigate()
+
+// 	function exit() {
+//     setIsAuth(true)
+//     navigate(paths.LOGIN)
+// }
+
     return (
-        <div className="pop-exit" id="popExit">
-				<div className="pop-exit__container">
-					<div className="pop-exit__block">
-						<div className="pop-exit__ttl">
-							<h2>Выйти из аккаунта?</h2>
-						</div>
-						<form  className="pop-exit__form" id="formExit" action="#">
-							<div className="pop-exit__form-group">
-								<button className="pop-exit__exit-yes _hover01" id="exitYes"><a href="modal/signin.html">Да, выйти</a> </button>
-								<button className="pop-exit__exit-no _hover03" id="exitNo"><a href="main.html">Нет, остаться</a> </button>
-							</div>
-						</form >
-					</div>
-				</div>
-			</div>
+       <PopExit  id="popExit">
+		<ExitContainer>
+			<ExitBlock>
+					<ExitTtl>
+					<h2>Выйти из аккаунта?</h2>
+					</ExitTtl>
+				
+						<ExitForm>
+						<ExitFormGroup>
+								<ExitButtonYes><Link to={paths.LOGIN}>Да, выйти</Link></ExitButtonYes>
+								<ExitButtonNo><Link to ={paths.MAIN}>Нет, остаться</Link> </ExitButtonNo>
+							</ExitFormGroup>
+						</ExitForm>
+					
+			</ExitBlock>
+		</ExitContainer>
+	   </PopExit>
     )
 }
 export default IsExit
