@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { paths } from "../../lib/constsns"
 
 
-function Header({tasksList, setTasksList}) {
+function Header({tasksList, setTasksList, user}) {
 
 
 const [isOpen, setOpen] = useState(false)
@@ -16,9 +16,9 @@ const OpenUser =()=>{
 
 		function addTask() {
 			const newTask = { 
-				id: tasksList.length+1,
-				theme:"No name",
-				name: "Новая задача", 
+				_id: tasksList.length+1,
+				topic:"No name",
+				title: "Новая задача", 
 				date:"01.01.24",
 				status:"Без статуса"
 				}
@@ -49,7 +49,7 @@ const OpenExitWindow = () => {
 					</HeaderBtnMain>{
 
 					}
-						<HeaderUser onClick={OpenUser} >Ivan Ivanov</HeaderUser>
+						<HeaderUser onClick={OpenUser} >{user.name}</HeaderUser>
 						{isOpen && 
 						<HeaderPopUserSet id="user-set-target" >
 							<p>Ivan Ivanov</p>

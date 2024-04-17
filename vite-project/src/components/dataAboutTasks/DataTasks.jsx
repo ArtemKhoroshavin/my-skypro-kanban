@@ -1,8 +1,12 @@
 import { Link, useParams } from "react-router-dom"
 import { paths } from "../../lib/constsns"
+import { useEffect } from "react"
+import { getTodoes } from "../../api"
 
 function DataTask() {
 	const {id} = useParams()
+
+ 
 
     return (
         <div className="pop-browse" id="popBrowse">
@@ -10,7 +14,7 @@ function DataTask() {
 					<div className="pop-browse__block">
 						<div className="pop-browse__content">
 							<div className="pop-browse__top-block">
-								<h3 className="pop-browse__ttl">Задача {id}</h3>
+								<h3 className="pop-browse__ttl">Задача </h3>
 								<div className="categories__theme theme-top _orange _active-category">
 									<p className="_orange">Web Design</p>
 								</div>
@@ -18,20 +22,8 @@ function DataTask() {
 							<div className="pop-browse__status status">
 								<p className="status__p subttl">Статус</p>
 								<div className="status__themes">
-									<div className="status__theme _hide">
-										<p>Без статуса</p>
-									</div>
-									<div className="status__theme _gray">
-										<p className="_gray">Нужно сделать</p>
-									</div>
-									<div className="status__theme _hide">
-										<p>В работе</p>
-									</div>
-									<div className="status__theme _hide">
-										<p>Тестирование</p>
-									</div>
-									<div className="status__theme _hide">
-										<p>Готово</p>
+									<div className="status__theme0">
+										<p>{id}</p>
 									</div>
 								</div>
 							</div>

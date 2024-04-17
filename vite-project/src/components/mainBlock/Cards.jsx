@@ -4,23 +4,7 @@ import { CardContainer, CardContent, CardGroup, CardItem, CardTheme, CardDate, C
 
 
 
-function Cards({theme, name, date, id}) {
-
-//     function colorTheme(theme) {
-//         if (theme==="Research"){
-//             return("__purple")
-//         }
-//         else if (theme==="Copywriting"){
-//         return(" _orange")}
-
-//         else if(theme==="Web Design"){
-//             return (" _green")
-//         }
-//         else {
-//             return ("_gray")
-//         }
-//     }
-
+function Cards({topic, title, date, _id}) {
 
 
     return (
@@ -28,10 +12,10 @@ function Cards({theme, name, date, id}) {
          <CardItem>
             <CardsCard>
             <CardGroup>
-                <CardTheme  $theme={theme}>
-                <p> {theme}</p>
+                <CardTheme  $theme={topic}>
+                <p> {topic}</p>
                 </CardTheme>
-                    <Link to={`/card/${id}`}>
+                    <Link to={`/card/${_id}`}>
                     <CardButton>
                             <div></div>
                             <div></div>
@@ -42,7 +26,7 @@ function Cards({theme, name, date, id}) {
                </CardGroup>
                <CardContent>
                
-                       <CardTitle>{name}</CardTitle>
+                       <CardTitle>{title}</CardTitle>
                     
                    <CardDate>
                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">

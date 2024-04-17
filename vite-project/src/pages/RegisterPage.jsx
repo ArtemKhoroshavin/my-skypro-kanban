@@ -1,9 +1,11 @@
 import React from 'react'
 import Register from '../components/register/Register'
 
-const RegisterPage = () => {
+const RegisterPage = ({createUser}) => {
+
+
   return (
-    <Register/>
+    <Register createUser={createUser}/>
   )
 }
 

@@ -10,7 +10,7 @@ function Columns({status, tasks}) {
 			<ColumnTitle>
 			<p>{status}</p>
 			</ColumnTitle>
-			{tasks.map((task)=> <Cards key={task.id}{...task}/>)}
+			{tasks.map((task)=> <Cards key={task._id}{...task}/>)}
 		</ColumnMain>					
 
     )

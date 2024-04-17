@@ -2,15 +2,31 @@ import { Link, useNavigate } from "react-router-dom"
 import { paths } from "../../lib/constsns"
 import { Wrapper } from "../Common.styled"
 import { ContainerSignin, FormGroup, FormLogin, LoginBtn, Modal, ModalBlock, ModalInput, ModalTtl } from "./Login.styled"
+import { logon } from "../../api"
+import { useState } from "react"
 
-function Login({setIsAuth}) {
+function Login({ createUser}) {
 
-const navigate = useNavigate()
+    const [login, setUserLogin] = useState("")
+    const [password, setPassword] = useState("")
+   
 
-function login() {
-    setIsAuth(true)
-    navigate(paths.MAIN)
-}
+    const loginUser = async () => {
+
+        await logon({ login, password}).then((responseData)=>{createUser(responseData.user)
+        console.log("вход")
+        })
+        .catch((error)=>{
+            if (error.message==="Неправильный логин или пароль") {
+                alert(error.message)
+            }
+            else if (error.message==="Что-то сломалось") {
+                alert(error.message)
+            }
+        })
+     
+      }
+
 
     return (
         <>
@@ -22,9 +38,28 @@ function login() {
                         <h2>Вход</h2>
                     </ModalTtl>
 					<FormLogin>
-                        <ModalInput type="text" name="login" id="formlogin" placeholder="Эл. почта"></ModalInput>
-						<ModalInput type="password" name="password" id="formpassword" placeholder="Пароль"></ModalInput>
-                        <LoginBtn type="button" onClick={login}>Войти</LoginBtn>
+                        <ModalInput 
+                            type="text"
+                            name="login" 
+                            id="formlogin"
+                            placeholder="Эл. почта"
+                            value={login}
+                            onChange={(e)=>setUserLogin(e.target.value)}>
+                        </ModalInput>
+
+						<ModalInput 
+                            type="password"
+                            name="password" 
+                            id="formpassword"
+                            placeholder="Пароль"
+                            value={password}
+                            onChange={(e)=>setPassword(e.target.value)}>
+                        </ModalInput>
+
+                        <LoginBtn type="button" onClick={loginUser}>
+                            <Link to ={paths.MAIN}> Войти </Link>
+                        </LoginBtn>
+                        {/* <p style={{color:"red"}}>{showErrorLogin}</p> */}
 						<FormGroup>
 							<p>Нужно зарегистрироваться?</p>
 							<Link to={paths.REGISTER}>Регистрируйся здесь</Link>

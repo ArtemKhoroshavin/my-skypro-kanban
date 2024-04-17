@@ -1,10 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom"
 import { paths } from "../../lib/constsns"
 
-function PrivateRoutes({isAuth}) {
+function PrivateRoutes({user}) {
    
     return (
-       isAuth ? <Outlet/> : <Navigate to={paths.LOGIN}/>
+        user ? <Outlet/> : <Navigate to={paths.LOGIN}/>
     )
 }
 export default PrivateRoutes
